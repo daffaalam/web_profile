@@ -1,0 +1,16 @@
+name: eudeka_curriculum_vitae
+description: Curriculum vitae with Flutter.
+publish_to: 'none'
+version: 0.0.1+2
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  # TODO 0
+  url_launcher: ^5.4.11
+flutter:
+  uses-material-design: true
+  # TODO 0
+  assets:
+    - assets/personal_data.json

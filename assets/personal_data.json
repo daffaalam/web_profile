@@ -1,0 +1,134 @@
+{
+  "name": "Abiyyu Daffa' Alam",
+  "image": "https://telegra.ph/file/e1df916083691b6ce143d.jpg",
+  "desc_simple": "Academy Content Creator at Eudeka",
+  "desc_full": "-",
+  "social_media": [
+    {
+      "title": "github",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png",
+      "url": "https://github.com/daffaalam"
+    },
+    {
+      "title": "telegram",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png",
+      "url": "https://t.me/daffaalam"
+    },
+    {
+      "title": "whatsapp",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png",
+      "url": "https://wa.me/6282299368783"
+    },
+    {
+      "title": "email",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/New_Logo_Gmail.svg/1280px-New_Logo_Gmail.svg.png",
+      "url": "mailto:daffaalam@gmail.com"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Flutter",
+      "rating": 80
+    },
+    {
+      "title": "Java",
+      "rating": 70
+    },
+    {
+      "title": "Kotlin",
+      "rating": 70
+    },
+    {
+      "title": "PHP",
+      "rating": 60
+    },
+    {
+      "title": "MySQL",
+      "rating": 50
+    },
+    {
+      "title": "Git Management",
+      "rating": 70
+    },
+    {
+      "title": "Android OS Management",
+      "rating": 90
+    },
+    {
+      "title": "Windows OS Management",
+      "rating": 90
+    },
+    {
+      "title": "Mac OS Management",
+      "rating": 80
+    },
+    {
+      "title": "Linux OS Management",
+      "rating": 80
+    },
+    {
+      "title": "Active On Social Media",
+      "rating": 100
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Participants of Creative Kids Competition",
+      "period": "2016"
+    },
+    {
+      "title": "Participants of Indonesia Robot Cup",
+      "period": "2015 & 2016"
+    },
+    {
+      "title": "Participants of Kompetisi Robot Nasional",
+      "period": "2016"
+    },
+    {
+      "title": "Java Speaker on World Science Day",
+      "period": "2017"
+    },
+    {
+      "title": "Android Trainer at SMKI Rabbaanii",
+      "period": "2018"
+    },
+    {
+      "title": "Flutter Trainer at Eudeka",
+      "period": "2019-2020"
+    },
+    {
+      "title": "Contributor of Dicoding class \"Belajar Membuat Aplikasi Flutter untuk Pemula\"",
+      "period": "2020"
+    }
+  ],
+  "creations": [
+    {
+      "title": "Digital Book (Android Basic)",
+      "url": "https://drive.google.com/open?id=1jhKnzS6vM18VV5_DxN0_WZ3ttfZuHWHk"
+    },
+    {
+      "title": "Android App (BioMaker)",
+      "url": "https://play.google.com/store/apps/details?id=com.daffaalam.biomaker"
+    },
+    {
+      "title": "Android App (Juz Amma dan Doa Harian)",
+      "url": "https://play.google.com/store/apps/details?id=id.sch.rbs.juzammadoaharian"
+    },
+    {
+      "title": "Android App (Zakat Yuk)",
+      "url": "https://play.google.com/store/apps/details?id=com.daffaalam.zakat"
+    },
+    {
+      "title": "Android App (Rukun Islam Rukun Iman)",
+      "url": "https://play.google.com/store/apps/details?id=com.daffaalam.rukunislamiman"
+    },
+    {
+      "title": "Android App (Belajar Huruf Hijaiyah)",
+      "url": "https://play.google.com/store/apps/details?id=com.daffaalam.hurufhijaiyah"
+    },
+    {
+      "title": "Desktop App (Flutter Installer CLI)",
+      "url": "https://github.com/daffaalam/flutter_installer_cli"
+    }
+  ]
+}
