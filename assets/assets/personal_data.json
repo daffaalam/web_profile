@@ -1,0 +1,98 @@
+{
+  "name": "Abiyyu Daffa' Alam",
+  "image": "https://telegra.ph/file/e1df916083691b6ce143d.jpg",
+  "email": "daffaalam@gmail.com",
+  "desc_simple": "Academy Content Creator at Eudeka",
+  "desc_full": "Developer and Trainer - Believe - I Can I Must I Will",
+  "last_update": "27/09/2021",
+  "source": "https://github.com/daffaalam/curriculum_vitae",
+  "social_media": [
+    {
+      "title": "github",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/240px-Octicons-mark-github.svg.png",
+      "url": "https://github.com/daffaalam"
+    },
+    {
+      "title": "telegram",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/240px-Telegram_logo.svg.png",
+      "url": "https://t.me/daffaalam"
+    },
+    {
+      "title": "twitter",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Twitter_Logo_as_of_2021.svg/290px-Twitter_Logo_as_of_2021.svg.png",
+      "url": "https://twitter.com/daffaalam"
+    },
+    {
+      "title": "linkedin",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/240px-LinkedIn_logo_initials.png",
+      "url": "https://linkedin.com/in/daffaalam"
+    },
+    {
+      "title": "email",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/320px-Gmail_icon_%282020%29.svg.png",
+      "url": "mailto:daffaalam@gmail.com"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Flutter",
+      "rating": 100
+    },
+    {
+      "title": "Android Java",
+      "rating": 60
+    },
+    {
+      "title": "Android Kotlin",
+      "rating": 60
+    },
+    {
+      "title": "PHP Native",
+      "rating": 60
+    },
+    {
+      "title": "JavaScript Native",
+      "rating": 80
+    },
+    {
+      "title": "Python Native",
+      "rating": 60
+    },
+    {
+      "title": "Windows OS Management",
+      "rating": 100
+    },
+    {
+      "title": "Mac OS Management",
+      "rating": 60
+    },
+    {
+      "title": "Linux OS Management",
+      "rating": 80
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Flutter Trainer at Eudeka",
+      "period": "2019-Present"
+    }
+  ],
+  "creations": [
+    {
+      "title": "Android App (Juz Amma dan Doa Harian)",
+      "url": "https://play.google.com/store/apps/details?id=id.sch.rbs.juzammadoaharian"
+    },
+    {
+      "title": "Android App (Zakat Yuk)",
+      "url": "https://play.google.com/store/apps/details?id=com.daffaalam.zakat"
+    },
+    {
+      "title": "Android App (Rukun Islam Rukun Iman)",
+      "url": "https://play.google.com/store/apps/details?id=com.daffaalam.rukunislamiman"
+    },
+    {
+      "title": "Android App (Belajar Huruf Hijaiyah)",
+      "url": "https://play.google.com/store/apps/details?id=com.daffaalam.hurufhijaiyah"
+    }
+  ]
+}
