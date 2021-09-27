@@ -4,52 +4,49 @@ import 'package:flutter/material.dart';
 
 class ImageNetwork extends StatelessWidget {
   final String src;
-  final String title;
-  final double size;
+  final String? title;
+  final double? size;
 
-  ImageNetwork(
+  const ImageNetwork(
     this.src, {
+    Key? key,
     this.title,
     this.size,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Image.network(
-      this.src,
+      src,
       loadingBuilder: (
         BuildContext context,
         Widget widget,
-        ImageChunkEvent event,
+        ImageChunkEvent? event,
       ) {
-        if (event != null) {
-          return _noImage();
-        } else {
-          return widget;
-        }
+        return (event != null) ? _noImage() : widget;
       },
       errorBuilder: (
         BuildContext context,
         Object exception,
-        StackTrace stackTrace,
+        StackTrace? stackTrace,
       ) {
         return _noImage();
       },
-      width: this.size,
-      height: this.size,
+      width: size,
+      height: size,
     );
   }
 
   Widget _noImage() {
     return Tooltip(
-      message: this.title ?? this.src,
+      message: title ?? src,
       child: Container(
         alignment: Alignment.center,
-        width: this.size,
-        height: this.size,
+        width: size,
+        height: size,
         child: Icon(
           Icons.broken_image,
-          size: this.size,
+          size: size,
         ),
       ),
     );

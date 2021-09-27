@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../model/personal_data.dart';
 import '../widget/button_social_media.dart';
@@ -11,10 +12,28 @@ class ContentAbout extends StatelessWidget {
   final PersonalData personalData;
   final double horizontalPadding;
 
-  ContentAbout(
+  const ContentAbout(
     this.personalData, {
-    @required this.horizontalPadding,
-  });
+    Key? key,
+    required this.horizontalPadding,
+  }) : super(key: key);
+
+  Widget _emailWidget() {
+    return GestureDetector(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          personalData.email,
+          textAlign: TextAlign.center,
+        ),
+      ),
+      onTap: () async {
+        String emailUrl = 'mailto:${personalData.email}';
+        bool _canLaunch = await canLaunch(emailUrl);
+        if (_canLaunch) await launch(emailUrl);
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +54,7 @@ class ContentAbout extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             personalData.name,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
             ),
@@ -46,7 +65,7 @@ class ContentAbout extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             personalData.descSimple,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18.0,
             ),
             textAlign: TextAlign.center,
@@ -59,10 +78,10 @@ class ContentAbout extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
+        _emailWidget(),
+        const Divider(),
         ButtonSocialMedia(
-          padding: EdgeInsets.symmetric(
-            vertical: 16.0,
-          ),
+          padding: const EdgeInsets.all(16.0),
           socialMedia: personalData.socialMedia,
         ),
       ],

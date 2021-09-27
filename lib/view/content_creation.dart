@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../model/personal_data.dart';
@@ -10,12 +9,12 @@ import '../widget/widget_content.dart';
 class ContentCreation extends StatelessWidget {
   final List<Creation> creations;
 
-  ContentCreation(this.creations);
+  const ContentCreation(this.creations, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return WidgetContent(
-      title: Text(
+      title: const Text(
         "My Creations",
         style: TextStyle(
           fontSize: 20.0,
@@ -27,7 +26,7 @@ class ContentCreation extends StatelessWidget {
         (int index) {
           return ListTile(
             title: Text(creations[index].title),
-            trailing: Icon(Icons.open_in_new),
+            trailing: const Icon(Icons.open_in_new),
             onTap: () async {
               bool _canLaunch = await canLaunch(creations[index].url);
               if (_canLaunch) await launch(creations[index].url);

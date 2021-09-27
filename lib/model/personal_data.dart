@@ -1,23 +1,35 @@
 import 'dart:convert';
 
-// TODO 1
+part 'creation.dart';
+part 'experience.dart';
+part 'skill.dart';
+part 'social_media.dart';
+
+/// TODO 1
+/// buat model untuk menampung data JSON menjadi sebuah class atau Object
 
 class PersonalData {
   PersonalData({
-    this.name,
-    this.image,
-    this.descSimple,
-    this.descFull,
-    this.socialMedia,
-    this.skills,
-    this.experiences,
-    this.creations,
+    required this.name,
+    required this.image,
+    this.descSimple = '-',
+    this.descFull = '-',
+    this.email = '-',
+    this.lastUpdate = '-',
+    this.source = 'https://github.com/',
+    this.socialMedia = const <SocialMedia>[],
+    this.skills = const <Skill>[],
+    this.experiences = const <Experience>[],
+    this.creations = const <Creation>[],
   });
 
   String name;
   String image;
   String descSimple;
   String descFull;
+  String email;
+  String lastUpdate;
+  String source;
   List<SocialMedia> socialMedia;
   List<Skill> skills;
   List<Experience> experiences;
@@ -37,6 +49,9 @@ class PersonalData {
       image: json["image"],
       descSimple: json["desc_simple"],
       descFull: json["desc_full"],
+      email: json["email"],
+      lastUpdate: json["last_update"],
+      source: json["source"],
       socialMedia: List<SocialMedia>.from(json["social_media"].map((x) {
         return SocialMedia.fromMap(x);
       })),
@@ -58,6 +73,9 @@ class PersonalData {
       "image": image,
       "desc_simple": descSimple,
       "desc_full": descFull,
+      "email": email,
+      "last_update": lastUpdate,
+      "source": source,
       "social_media": List<dynamic>.from(socialMedia.map((x) {
         return x.toMap();
       })),
@@ -70,138 +88,6 @@ class PersonalData {
       "creations": List<dynamic>.from(creations.map((x) {
         return x.toMap();
       })),
-    };
-  }
-}
-
-class Creation {
-  Creation({
-    this.title,
-    this.url,
-  });
-
-  String title;
-  String url;
-
-  factory Creation.fromJson(String str) {
-    return Creation.fromMap(json.decode(str));
-  }
-
-  String toJson() {
-    return json.encode(toMap());
-  }
-
-  factory Creation.fromMap(Map<String, dynamic> json) {
-    return Creation(
-      title: json["title"],
-      url: json["url"],
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      "title": title,
-      "url": url,
-    };
-  }
-}
-
-class Experience {
-  Experience({
-    this.title,
-    this.period,
-  });
-
-  String title;
-  String period;
-
-  factory Experience.fromJson(String str) {
-    return Experience.fromMap(json.decode(str));
-  }
-
-  String toJson() {
-    return json.encode(toMap());
-  }
-
-  factory Experience.fromMap(Map<String, dynamic> json) {
-    return Experience(
-      title: json["title"],
-      period: json["period"],
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      "title": title,
-      "period": period,
-    };
-  }
-}
-
-class Skill {
-  Skill({
-    this.title,
-    this.rating,
-  });
-
-  String title;
-  int rating;
-
-  factory Skill.fromJson(String str) {
-    return Skill.fromMap(json.decode(str));
-  }
-
-  String toJson() {
-    return json.encode(toMap());
-  }
-
-  factory Skill.fromMap(Map<String, dynamic> json) {
-    return Skill(
-      title: json["title"],
-      rating: json["rating"],
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      "title": title,
-      "rating": rating,
-    };
-  }
-}
-
-class SocialMedia {
-  SocialMedia({
-    this.title,
-    this.image,
-    this.url,
-  });
-
-  String title;
-  String image;
-  String url;
-
-  factory SocialMedia.fromJson(String str) {
-    return SocialMedia.fromMap(json.decode(str));
-  }
-
-  String toJson() {
-    return json.encode(toMap());
-  }
-
-  factory SocialMedia.fromMap(Map<String, dynamic> json) {
-    return SocialMedia(
-      title: json["title"],
-      image: json["image"],
-      url: json["url"],
-    );
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      "title": title,
-      "image": image,
-      "url": url,
     };
   }
 }

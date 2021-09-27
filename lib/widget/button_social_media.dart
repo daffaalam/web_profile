@@ -8,37 +8,49 @@ import 'image_network.dart';
 
 class ButtonSocialMedia extends StatelessWidget {
   final EdgeInsets padding;
+  final WrapAlignment alignment;
+  final double spacing;
+  final double? runSpacing;
   final List<SocialMedia> socialMedia;
+  final IconThemeData _themeData = const IconThemeData.fallback();
 
-  ButtonSocialMedia({
+  const ButtonSocialMedia({
+    Key? key,
     this.padding = const EdgeInsets.all(0.0),
+    this.alignment = WrapAlignment.center,
+    this.spacing = 32.0,
+    this.runSpacing,
     this.socialMedia = const <SocialMedia>[],
-  });
+  }) : super(key: key);
+
+  Widget _button(int index) {
+    return InkWell(
+      child: ImageNetwork(
+        socialMedia[index].image,
+        title: socialMedia[index].title,
+        size: _themeData.size,
+      ),
+      onTap: () async {
+        bool _canLaunch = await canLaunch(socialMedia[index].url);
+        if (_canLaunch) await launch(socialMedia[index].url);
+      },
+      hoverColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      splashColor: Colors.transparent,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: this.padding,
+      padding: padding,
       child: Wrap(
-        alignment: WrapAlignment.spaceAround,
+        alignment: alignment,
+        spacing: spacing,
+        runSpacing: runSpacing ?? (spacing / 2),
         children: List<Widget>.generate(
-          this.socialMedia.length,
-          (int index) {
-            return InkWell(
-              child: ImageNetwork(
-                this.socialMedia[index].image,
-                title: this.socialMedia[index].title,
-                size: IconThemeData.fallback().size * 1.5,
-              ),
-              onTap: () async {
-                bool _canLaunch = await canLaunch(this.socialMedia[index].url);
-                if (_canLaunch) await launch(this.socialMedia[index].url);
-              },
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              splashColor: Colors.transparent,
-            );
-          },
+          socialMedia.length,
+          (int index) => _button(index),
         ),
       ),
     );

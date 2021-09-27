@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import '../model/personal_data.dart';
 import '../widget/widget_content.dart';
@@ -9,12 +8,12 @@ import '../widget/widget_content.dart';
 class ContentExperience extends StatelessWidget {
   final List<Experience> experiences;
 
-  ContentExperience(this.experiences);
+  const ContentExperience(this.experiences, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return WidgetContent(
-      title: Text(
+      title: const Text(
         "My Experiences",
         style: TextStyle(
           fontSize: 20.0,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import '../model/personal_data.dart';
 import '../widget/widget_content.dart';
@@ -9,12 +8,31 @@ import '../widget/widget_content.dart';
 class ContentSkill extends StatelessWidget {
   final List<Skill> skills;
 
-  ContentSkill(this.skills);
+  const ContentSkill(this.skills, {Key? key}) : super(key: key);
+
+  List<Icon> _starRating(int rating) {
+    rating = rating ~/ 10;
+    return List<Icon>.generate(
+      5,
+      (int index) {
+        int count = (index + 1) * 2;
+        IconData iconData = Icons.star_border;
+        if (count - rating == 1) {
+          iconData = Icons.star_half;
+        } else if (count - rating < 1) {
+          iconData = Icons.star;
+        }
+        return Icon(
+          iconData,
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return WidgetContent(
-      title: Text(
+      title: const Text(
         "My Skills",
         style: TextStyle(
           fontSize: 20.0,
@@ -25,12 +43,11 @@ class ContentSkill extends StatelessWidget {
         skills.length,
         (int index) {
           return ListTile(
-            title: Text(
-              "${skills[index].title} (${skills[index].rating}%)",
+            title: Text(skills[index].title),
+            trailing: Wrap(
+              children: _starRating(skills[index].rating),
             ),
-            subtitle: LinearProgressIndicator(
-              value: skills[index].rating / 100,
-            ),
+            onTap: () {},
             mouseCursor: MouseCursor.uncontrolled,
           );
         },
