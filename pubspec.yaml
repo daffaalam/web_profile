@@ -1,11 +1,13 @@
 name: eudeka_web_profile
 description: Web Profile with Flutter.
 publish_to: 'none'
-version: 0.1.0+3
+version: 0.1.1+4
 environment:
   sdk: ">=2.12.0 <3.0.0"
 dependencies:
   flutter:
+    sdk: flutter
+  flutter_web_plugins:
     sdk: flutter
   # TODO 0
   # tambahankan library 'url_launcher' agar dapat membuka link ke web atau browser lain
@@ -13,7 +15,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: any
 flutter:
   uses-material-design: true
   # TODO 0
