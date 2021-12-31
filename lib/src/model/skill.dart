@@ -25,9 +25,12 @@ class Skill {
   }
 
   Map<String, dynamic> toMap() {
-    return {
+    return <String, dynamic>{
       "title": title,
       "rating": rating,
     };
   }
+
+  @override
+  String toString() => toJson();
 }

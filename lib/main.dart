@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'common/configure_nonweb.dart'
-    if (dart.library.html) 'common/configure_web.dart';
-import 'common/custom_scroll_behavior.dart';
-import 'view/home_page.dart';
+import 'src/common/configure_nonweb.dart'
+    if (dart.library.html) 'src/common/configure_web.dart';
+import 'src/common/custom_scroll_behavior.dart';
+import 'src/ui/home/home_page.dart';
 
 void main() {
-  configureApp(); // https://flutter.dev/docs/development/ui/navigation/url-strategies
+  // https://flutter.dev/docs/development/ui/navigation/url-strategies
+  configureApp();
   runApp(const MainApp());
 }
 
@@ -26,7 +27,7 @@ class MainApp extends StatelessWidget {
           },
         );
       },
-      title: "Web Profile",
+      title: 'Web Profile | Abiyyu Daffa Alam',
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       scrollBehavior: CustomScrollBehavior(),

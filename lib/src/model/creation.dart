@@ -25,9 +25,12 @@ class Creation {
   }
 
   Map<String, dynamic> toMap() {
-    return {
+    return <String, dynamic>{
       "title": title,
       "url": url,
     };
   }
+
+  @override
+  String toString() => toJson();
 }

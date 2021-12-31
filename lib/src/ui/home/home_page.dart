@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../common/repository.dart';
-import '../model/personal_data.dart';
-import 'content_about.dart';
-import 'content_creation.dart';
-import 'content_experience.dart';
-import 'content_skill.dart';
-import 'content_update.dart';
+import '../../common/repository.dart';
+import '../../model/personal_data.dart';
+import 'components/content_about.dart';
+import 'components/content_creation.dart';
+import 'components/content_experience.dart';
+import 'components/content_skill.dart';
+import 'components/content_update.dart';
 
 // TODO 10
 
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               ContentAbout(
                 data,
-                horizontalPadding: constraints.maxWidth / 4,
+                orientation: Orientation.portrait,
               ),
               ...contents,
             ],
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                   height: constraints.maxHeight,
                   child: ContentAbout(
                     data,
-                    horizontalPadding: constraints.maxWidth / 16,
+                    orientation: Orientation.landscape,
                   ),
                 ),
               ),

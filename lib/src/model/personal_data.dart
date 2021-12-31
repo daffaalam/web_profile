@@ -68,7 +68,7 @@ class PersonalData {
   }
 
   Map<String, dynamic> toMap() {
-    return {
+    return <String, dynamic>{
       "name": name,
       "image": image,
       "desc_simple": descSimple,
@@ -90,4 +90,7 @@ class PersonalData {
       })),
     };
   }
+
+  @override
+  String toString() => toJson();
 }

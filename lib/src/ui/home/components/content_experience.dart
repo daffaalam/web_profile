@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../model/personal_data.dart';
-import '../widget/widget_content.dart';
+import '../../../model/personal_data.dart';
+import '../../../widget/widget_content.dart';
 
 // TODO 8
 
@@ -14,7 +14,7 @@ class ContentExperience extends StatelessWidget {
   Widget build(BuildContext context) {
     return WidgetContent(
       title: const Text(
-        "My Experiences",
+        'My Experiences',
         style: TextStyle(
           fontSize: 20.0,
           fontWeight: FontWeight.bold,
@@ -25,8 +25,8 @@ class ContentExperience extends StatelessWidget {
         (int index) {
           return ListTile(
             title: Text(
-              "${experiences[index].title} "
-              "(${experiences[index].period})",
+              '${experiences[index].title} '
+              '(${experiences[index].period})',
             ),
             mouseCursor: MouseCursor.uncontrolled,
           );

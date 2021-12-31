@@ -1,9 +1,9 @@
 name: eudeka_web_profile
 description: Web Profile with Flutter.
 publish_to: 'none'
-version: 0.1.1+4
+version: 0.1.1+5
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.15.1 <3.0.0"
 dependencies:
   flutter:
     sdk: flutter
@@ -11,7 +11,7 @@ dependencies:
     sdk: flutter
   # TODO 0
   # tambahankan library 'url_launcher' agar dapat membuka link ke web atau browser lain
-  url_launcher: ^6.0.12
+  url_launcher: ^6.0.17
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -21,5 +21,4 @@ flutter:
   # TODO 0
   # tambahkan aset JSON untuk penyimpanan data utama
   assets:
-    - assets/personal_data.json
-    - assets/photo_profile.jpg
+    - assets/

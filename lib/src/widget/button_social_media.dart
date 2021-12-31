@@ -2,18 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../model/personal_data.dart';
-import 'image_network.dart';
+import 'image_dynamic.dart';
 
 // TODO 5
 
 class ButtonSocialMedia extends StatelessWidget {
-  final EdgeInsets padding;
-  final WrapAlignment alignment;
-  final double spacing;
-  final double? runSpacing;
-  final List<SocialMedia> socialMedia;
-  final IconThemeData _themeData = const IconThemeData.fallback();
-
   const ButtonSocialMedia({
     Key? key,
     this.padding = const EdgeInsets.all(0.0),
@@ -21,14 +14,23 @@ class ButtonSocialMedia extends StatelessWidget {
     this.spacing = 32.0,
     this.runSpacing,
     this.socialMedia = const <SocialMedia>[],
+    this.size,
   }) : super(key: key);
+
+  final EdgeInsets padding;
+  final WrapAlignment alignment;
+  final double spacing;
+  final double? runSpacing;
+  final List<SocialMedia> socialMedia;
+  final double? size;
+  final IconThemeData _themeData = const IconThemeData.fallback();
 
   Widget _button(int index) {
     return InkWell(
-      child: ImageNetwork(
+      child: ImageDynamic(
         socialMedia[index].image,
         title: socialMedia[index].title,
-        size: _themeData.size,
+        size: size ?? _themeData.size,
       ),
       onTap: () async {
         bool _canLaunch = await canLaunch(socialMedia[index].url);

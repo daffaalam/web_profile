@@ -66,7 +66,7 @@ class WidgetContent extends StatelessWidget {
         children: children,
       ),
       onNotification: (OverscrollIndicatorNotification overscroll) {
-        overscroll.disallowGlow();
+        overscroll.disallowIndicator();
         return false;
       },
     );

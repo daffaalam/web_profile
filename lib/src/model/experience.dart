@@ -25,9 +25,12 @@ class Experience {
   }
 
   Map<String, dynamic> toMap() {
-    return {
+    return <String, dynamic>{
       "title": title,
       "period": period,
     };
   }
+
+  @override
+  String toString() => toJson();
 }

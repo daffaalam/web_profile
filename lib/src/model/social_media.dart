@@ -28,10 +28,13 @@ class SocialMedia {
   }
 
   Map<String, dynamic> toMap() {
-    return {
+    return <String, dynamic>{
       "title": title,
       "image": image,
       "url": url,
     };
   }
+
+  @override
+  String toString() => toJson();
 }

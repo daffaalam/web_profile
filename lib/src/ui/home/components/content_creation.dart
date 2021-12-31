@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import '../model/personal_data.dart';
-import '../widget/widget_content.dart';
+import '../../../common/utils.dart';
+import '../../../model/personal_data.dart';
+import '../../../widget/widget_content.dart';
 
 // TODO 7
 
@@ -15,7 +15,7 @@ class ContentCreation extends StatelessWidget {
   Widget build(BuildContext context) {
     return WidgetContent(
       title: const Text(
-        "My Creations",
+        'My Creations',
         style: TextStyle(
           fontSize: 20.0,
           fontWeight: FontWeight.bold,
@@ -27,9 +27,8 @@ class ContentCreation extends StatelessWidget {
           return ListTile(
             title: Text(creations[index].title),
             trailing: const Icon(Icons.open_in_new),
-            onTap: () async {
-              bool _canLaunch = await canLaunch(creations[index].url);
-              if (_canLaunch) await launch(creations[index].url);
+            onTap: () {
+              Utils.urlLaunch(creations[index].url);
             },
           );
         },
