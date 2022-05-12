@@ -4,30 +4,30 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "assets/AssetManifest.json": "4c05afaeda2c8be6ba6484eaee3aa141",
-"assets/assets/personal_data.json": "7fb6c48c36393000e4eddf494264aa47",
+"assets/assets/personal_data.json": "83dc6106da06b44482e4a54a748be42c",
 "assets/assets/photo_profile.jpg": "ec552e2ba02fac2b4dec00e1d6daba4d",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/NOTICES": "75326e84e12bf81c5ee5d44df26a9ae4",
-"canvaskit/canvaskit.js": "43fa9e17039a625450b6aba93baf521e",
-"canvaskit/canvaskit.wasm": "04ed3c745ff1dee16504be01f9623498",
-"canvaskit/profiling/canvaskit.js": "f3bfccc993a1e0bfdd3440af60d99df4",
-"canvaskit/profiling/canvaskit.wasm": "a9610cf39260f60fbe7524a785c66101",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
+"assets/NOTICES": "ab6cc47e27e72bdea3cfedacf9d19d1a",
+"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
+"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
+"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
+"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
 "favicon.png": "93dd08df4ae5bac6a72f963ac07c14ad",
+"flutter.js": "0816e65a103ba8ba51b174eeeeb2cb67",
 "icons/Icon-192.png": "cd40c8aa073742411b254af06b796110",
 "icons/Icon-512.png": "63bf83e9ce69146dccc8a2e2b4883b11",
-"index.html": "1291161262c0633f9fb5b4cab20226ab",
-"/": "1291161262c0633f9fb5b4cab20226ab",
-"main.dart.js": "bfd6af53263fecb8c9ba249c77f1aab8",
+"index.html": "af0ee389b4eb6a82a47941810dedf029",
+"/": "af0ee389b4eb6a82a47941810dedf029",
+"main.dart.js": "e2bc628b39f43cdce2b51dd5cefa122d",
 "manifest.json": "9be5cfcee7dbd59857defb411a50437f",
-"version.json": "3057ed0eb02dffb77c9cc80dd48a2b4e"
+"version.json": "5001b52b7791d0b511bc05482761d621"
 };
 
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "/",
-"main.dart.js",
+  "main.dart.js",
 "index.html",
 "assets/NOTICES",
 "assets/AssetManifest.json",
