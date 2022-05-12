@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../model/personal_data.dart';
 import '../../../widget/widget_content.dart';
 
-// TODO 8
-
 class ContentExperience extends StatelessWidget {
   final List<Experience> experiences;
 

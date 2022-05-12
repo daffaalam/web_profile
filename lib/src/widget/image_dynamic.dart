@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// TODO 4
-
 class ImageDynamic extends StatelessWidget {
   const ImageDynamic(
     this.src, {

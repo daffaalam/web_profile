@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:url_strategy/url_strategy.dart';
 
-import 'src/common/configure_nonweb.dart'
-    if (dart.library.html) 'src/common/configure_web.dart';
 import 'src/common/custom_scroll_behavior.dart';
 import 'src/ui/home/home_page.dart';
 
 void main() {
-  // https://flutter.dev/docs/development/ui/navigation/url-strategies
-  configureApp();
+  setPathUrlStrategy();
   runApp(const MainApp());
 }
-
-// TODO 11
 
 class MainApp extends StatelessWidget {
   const MainApp({Key? key}) : super(key: key);

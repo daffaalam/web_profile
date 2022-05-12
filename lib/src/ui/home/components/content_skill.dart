@@ -4,8 +4,6 @@ import '../../../model/personal_data.dart';
 import '../../../widget/stars_rating.dart';
 import '../../../widget/widget_content.dart';
 
-// TODO 9
-
 class ContentSkill extends StatelessWidget {
   final List<Skill> skills;
 

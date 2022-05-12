@@ -7,8 +7,6 @@ import '../../../widget/image_dynamic.dart';
 import '../../../widget/padding_text.dart';
 import '../../../widget/widget_content.dart';
 
-// TODO 6
-
 class ContentAbout extends StatelessWidget {
   const ContentAbout(
     this.personalData, {
@@ -19,6 +17,10 @@ class ContentAbout extends StatelessWidget {
   final PersonalData personalData;
   final Orientation orientation;
 
+  double _maxSize(double maxSize, [double minSize = 128.0]) {
+    return (maxSize > minSize) ? maxSize : minSize;
+  }
+
   Widget _emailWidget() {
     return GestureDetector(
       child: PaddingText(
@@ -26,7 +28,11 @@ class ContentAbout extends StatelessWidget {
         textAlign: TextAlign.center,
       ),
       onTap: () {
-        Utils.urlLaunch('mailto:${personalData.email}');
+        Uri url = Uri(
+          scheme: 'mailto',
+          path: personalData.email,
+        );
+        Utils.urlLaunch(url);
       },
     );
   }
@@ -42,13 +48,11 @@ class ContentAbout extends StatelessWidget {
             shape: BoxShape.circle,
           ),
           constraints: BoxConstraints(
-            minWidth: 256.0,
-            maxWidth: size.height / 3,
-            minHeight: 256.0,
-            maxHeight: size.height / 3,
+            maxWidth: _maxSize(size.height / 3),
+            maxHeight: _maxSize(size.height / 3),
           ),
-          child: ImageDynamic(personalData.image),
           clipBehavior: Clip.antiAliasWithSaveLayer,
+          child: ImageDynamic(personalData.image),
         ),
         const SizedBox(
           height: 16.0,

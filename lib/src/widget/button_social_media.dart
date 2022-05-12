@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:web_profile/src/common/utils.dart';
 
 import '../model/personal_data.dart';
 import 'image_dynamic.dart';
-
-// TODO 5
 
 class ButtonSocialMedia extends StatelessWidget {
   const ButtonSocialMedia({
@@ -27,18 +25,17 @@ class ButtonSocialMedia extends StatelessWidget {
 
   Widget _button(int index) {
     return InkWell(
+      onTap: () {
+        Utils.urlLaunchString(socialMedia[index].url);
+      },
+      hoverColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      splashColor: Colors.transparent,
       child: ImageDynamic(
         socialMedia[index].image,
         title: socialMedia[index].title,
         size: size ?? _themeData.size,
       ),
-      onTap: () async {
-        bool _canLaunch = await canLaunch(socialMedia[index].url);
-        if (_canLaunch) await launch(socialMedia[index].url);
-      },
-      hoverColor: Colors.transparent,
-      highlightColor: Colors.transparent,
-      splashColor: Colors.transparent,
     );
   }
 

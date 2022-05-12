@@ -5,9 +5,6 @@ part 'experience.dart';
 part 'skill.dart';
 part 'social_media.dart';
 
-/// TODO 1
-/// buat model untuk menampung data JSON menjadi sebuah class atau Object
-
 class PersonalData {
   PersonalData({
     required this.name,

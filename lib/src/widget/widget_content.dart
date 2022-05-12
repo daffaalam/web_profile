@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// TODO 3
-
 class WidgetContent extends StatelessWidget {
   final Widget? title;
   final List<Widget> children;

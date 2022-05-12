@@ -3,34 +3,34 @@
   "image": "assets/photo_profile.jpg",
   "email": "daffaalam@gmail.com",
   "desc_simple": "Academy Content Creator at Eudeka",
-  "desc_full": "Developer and Trainer - Believe - I Can I Must I Will",
-  "last_update": "27/09/2021",
+  "desc_full": "-",
+  "last_update": "12/05/2022",
   "source": "https://github.com/daffaalam/web_profile",
   "social_media": [
     {
       "title": "github",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/240px-Octicons-mark-github.svg.png",
+      "image": "https://avatars.githubusercontent.com/u/9919",
       "url": "https://github.com/daffaalam"
     },
     {
       "title": "telegram",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/240px-Telegram_logo.svg.png",
+      "image": "https://avatars.githubusercontent.com/u/6113871",
       "url": "https://t.me/daffaalam"
     },
     {
       "title": "twitter",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Twitter_Logo_as_of_2021.svg/290px-Twitter_Logo_as_of_2021.svg.png",
+      "image": "https://avatars.githubusercontent.com/u/50278",
       "url": "https://twitter.com/daffaalam"
     },
     {
       "title": "linkedin",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/240px-LinkedIn_logo_initials.png",
+      "image": "https://avatars.githubusercontent.com/u/357098",
       "url": "https://linkedin.com/in/daffaalam"
     },
     {
       "title": "email",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/320px-Gmail_icon_%282020%29.svg.png",
-      "url": "mailto:daffaalam@gmail.com"
+      "image": "https://avatars.githubusercontent.com/u/16307608",
+      "url": "daffaalam@gmail.com"
     }
   ],
   "skills": [
@@ -56,6 +56,10 @@
     },
     {
       "title": "Python Native",
+      "rating": 60
+    },
+    {
+      "title": "Docker",
       "rating": 60
     },
     {

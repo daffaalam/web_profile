@@ -24,7 +24,7 @@ class ContentUpdate extends StatelessWidget {
           ),
           isThreeLine: true,
           onTap: () {
-            Utils.urlLaunch(data.source);
+            Utils.urlLaunchString(data.source);
           },
           hoverColor: Colors.transparent,
         ),

@@ -4,8 +4,6 @@ import '../../../common/utils.dart';
 import '../../../model/personal_data.dart';
 import '../../../widget/widget_content.dart';
 
-// TODO 7
-
 class ContentCreation extends StatelessWidget {
   final List<Creation> creations;
 
@@ -28,7 +26,7 @@ class ContentCreation extends StatelessWidget {
             title: Text(creations[index].title),
             trailing: const Icon(Icons.open_in_new),
             onTap: () {
-              Utils.urlLaunch(creations[index].url);
+              Utils.urlLaunchString(creations[index].url);
             },
           );
         },

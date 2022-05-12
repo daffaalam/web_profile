@@ -8,13 +8,11 @@ import 'components/content_experience.dart';
 import 'components/content_skill.dart';
 import 'components/content_update.dart';
 
-// TODO 10
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
