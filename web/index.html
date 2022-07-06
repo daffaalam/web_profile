@@ -14,12 +14,32 @@
   <title>Web Profile | Abiyyu Daffa Alam</title>
   <link rel="manifest" href="manifest.json">
   <script>
+    window.flutterWebRenderer = "html";
     var serviceWorkerVersion = null;
   </script>
   <script src="flutter.js" defer></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: auto;
+    }
+
+    html {
+      display: table;
+    }
+
+    body {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 
 <body>
+  <div>
+    <p>if it doesn't work, try opening it in another browser</p>
+  </div>
   <script>
     window.addEventListener('load', function (ev) {
       _flutter.loader.loadEntrypoint({
